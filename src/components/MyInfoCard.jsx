@@ -12,7 +12,7 @@ export default function MyInfoCard() {
     <Card
       variant="outlined"
       sx={{
-        width: 480,
+        maxWidth: 480,
         mx: 'auto',
         mb: 2,
         mt: 4
@@ -20,20 +20,28 @@ export default function MyInfoCard() {
     >
       <CardContent>
         <Box
-          sx={{
-            display: 'flex',
-            gap: 2
-          }}
+          sx={ theme => ({
+            [theme.breakpoints.up('sm')]: {
+              display: 'flex',
+              gap: 2,
+            }
+          })}
         >
-          <Avatar sx={{
-            bgcolor: theme => theme.palette.secondary.light,
+          <Avatar sx={ theme => ({
+            bgcolor: theme.palette.secondary.light,
             width: 56,
-            height: 56
-          }}>H</Avatar>
+            height: 56,
+            [theme.breakpoints.down('sm')]: {
+              mb: 2,
+              mx: 'auto',
+              width: 64,
+              height: 64
+            }
+          })}>H</Avatar>
           <Box color="text.secondary">
             <Typography variant='body2'>你好，我是holafei。</Typography>
             <Typography variant='body2'>我是一个干了十几年的老前端😄，现在我想像一个菜鸟一样去学习，学习React.</Typography>
-            <Typography variant='body2'>本项目采用github action部署到github pages</Typography>
+            <Typography variant='body2' mt={2}>本项目采用github action部署到github pages</Typography>
           </Box>
         </Box>
       </CardContent>
