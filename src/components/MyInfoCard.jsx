@@ -33,7 +33,7 @@ export default function MyInfoCard() {
           <Box color="text.secondary">
             <Typography variant='body2'>你好，我是holafei。</Typography>
             <Typography variant='body2'>我是一个干了十几年的老前端😄，现在我想像一个菜鸟一样去学习，学习React.</Typography>
-            <Typography variant='body2'>本项目采用github action部署到github pages.</Typography>
+            <Typography variant='body2'>本项目采用github action部署到github pages</Typography>
           </Box>
         </Box>
       </CardContent>
