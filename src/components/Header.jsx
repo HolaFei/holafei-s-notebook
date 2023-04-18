@@ -14,7 +14,7 @@ export default function Header() {
         <GradientText>Holafei's notebook</GradientText>
       </Typography>
       <Typography component="h2" variant="subtitle1">
-        <GradientText>for my code life / 代码人生</GradientText>
+        <GradientText>for my coding life / 代码人生</GradientText>
       </Typography>
     </Box>
   )
